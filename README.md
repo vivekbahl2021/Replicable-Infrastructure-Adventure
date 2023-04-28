@@ -54,7 +54,7 @@ To write infrastructure as code for this project, follow these steps:
    - example to add a resource group, you can use the following code:
      `resource "azurerm_resource_group" "rg" {
    name     = "rg-test-adevnture-eastus-01"
-   location = "east-us"
+   location = "eastus"
    tags = {
       Environment             = "test"
       Deployed_with_Terraform = "true"
