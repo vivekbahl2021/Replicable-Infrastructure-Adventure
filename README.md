@@ -42,3 +42,29 @@ Steps 1-3 use Azure CLI commands in your terminal. The remaining steps use GitHu
      - `CONTAINER_NAME = tfstate`
      - `RESOURCE_GROUP = tfstate`
      - `STORAGE_ACCOUNT = <ACCOUNTNAME>`
+
+### Writing Infrastructure as Code
+
+To write infrastructure as code for this project, follow these steps:
+
+1. **Create a new branch** on your forked repository.
+2. **Navigate** to the `terraform` directory and **open** `main.tf`.
+3. **Add your desired infrastructure as code** to the `main.tf` file.
+
+   - example to add a resource group, you can use the following code:
+     `resource "azurerm_resource_group" "rg" {
+   name     = "adevnture-prod-01"
+   location = "east-us"
+   tags = {
+      Environment             = "test"
+      Deployed_with_Terraform = "true"
+   }
+}`
+
+4. Commit your changes and **create a pull request**.
+5. **The Terraform workflow** will run, initializing and **validating your code**. If everything passes, you can merge your pull request.
+6. The workflow will run again, initializing, planning, and **applying your changes to deploy your infrastructure**.
+
+## Future Enhancements/Features:
+
+- Implement Azure KeyVault to store and inject the secrets to the repository.
