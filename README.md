@@ -53,7 +53,7 @@ To write infrastructure as code for this project, follow these steps:
 
    - example to add a resource group, you can use the following code:
      `resource "azurerm_resource_group" "rg" {
-   name     = "adevnture-prod-01"
+   name     = "rg-test-adevnture-eastus-01"
    location = "east-us"
    tags = {
       Environment             = "test"
