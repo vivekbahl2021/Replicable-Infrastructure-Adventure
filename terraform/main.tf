@@ -11,6 +11,5 @@ resource "azurerm_resource_group" "rg" {
      Deployed_with_Terraform = "true"
 
    }
-
 }
 
